@@ -12,7 +12,7 @@ import lombok.Setter;
 
 @Table("task")
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 @Getter
 @Setter
 public class TaskEntity {
@@ -23,4 +23,13 @@ public class TaskEntity {
     private String description;
     private TaskStatus status;
     private LocalDate dueDate;
+
+    public TaskEntity(Long id, String title, String description, TaskStatus status, LocalDate dueDate) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.dueDate = dueDate;
+    }
+    
 }

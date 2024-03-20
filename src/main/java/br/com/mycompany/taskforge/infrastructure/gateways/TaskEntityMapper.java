@@ -11,6 +11,19 @@ public class TaskEntityMapper {
             taskDomainObject.id(), 
             taskDomainObject.title(),
             taskDomainObject.description(), 
-            taskDomainObject.status());
+            taskDomainObject.status(),
+            taskDomainObject.dueDate()
+            );
+    }
+
+
+      public Task toDomainObject(TaskEntity taskEntity) {
+        return new Task(
+            taskEntity.getId(), 
+            taskEntity.getTitle(),
+            taskEntity.getDescription(),
+            taskEntity.getStatus(), 
+            taskEntity.getDueDate()
+        );
     }
 }
