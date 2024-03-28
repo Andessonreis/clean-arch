@@ -11,7 +11,6 @@ import java.time.LocalDate;
  *
  * <p>The task entity consists of:</p>
  * <ul>
- *     <li>{@code id}: The unique identifier of the task.</li>
  *     <li>{@code title}: The title of the task.</li>
  *     <li>{@code description}: The description of the task.</li>
  *     <li>{@code status}: The status of the task.</li>

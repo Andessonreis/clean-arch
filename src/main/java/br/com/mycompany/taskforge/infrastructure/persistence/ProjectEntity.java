@@ -6,6 +6,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 import br.com.mycompany.taskforge.domain.entity.task.Task;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,8 +39,8 @@ public class ProjectEntity {
      * Unique identifier of the project.
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     /**
      * Name of the project.
      */
